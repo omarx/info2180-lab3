@@ -13,7 +13,7 @@
 
 body {
   font-family: var(--defaultFontFamily);
-  background: var(--lightGrey) url('../../tic-tac-toe-bg.png') repeat top left;
+  background: var(--lightGrey) url('../images/tic-tac-toe-bg.png') repeat top left;
   display: flex;
   flex-direction: column;
   justify-content: center;
