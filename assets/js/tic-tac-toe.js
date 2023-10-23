@@ -1,14 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     let X = 'X';
     let O = 'O';
-    let gridArr = [];
+    let gridArr = [];  // this is declared but not used
     let lastVal = 0;
     let playerX = true;
 
     const gridBox = document.getElementById("board");
     const grid = gridBox.querySelectorAll('div');
+
     grid.forEach(e => {
         e.className = 'square';
+
+        e.addEventListener('mouseover', function() {
+            this.classList.add('hover');
+        });
+
+        e.addEventListener('mouseout', function() {
+            this.classList.remove('hover');
+        });
+
         e.addEventListener('click', function() {
             if (this.hasAttribute('data-value')) {
                 return;
