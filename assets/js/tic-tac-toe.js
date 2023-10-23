@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridBox = document.getElementById("board");
     const grid = gridBox.querySelectorAll('div');
     const statusDiv = document.getElementById('status');
+    const resetGame=document.querySelector('.btn');
 
+    resetGame.addEventListener('click',()=>{
+        location.reload();
+    })
     function checkWinner() {
         const winningCombos = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8],
